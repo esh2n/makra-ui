@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;AACA;EACI","file":"styles.164d45a1.css","sourceRoot":"../src","sourcesContent":[".container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gradient-text {\n        font-size: 200px;\n    }\n\n}"]}
