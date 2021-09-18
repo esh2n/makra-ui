@@ -1,1 +1,2 @@
-import './components/SampleElement'
+import './components/GradientText'
+import './components/LoadingButton'

@@ -14,5 +14,8 @@
     "build:dev": "parcel build -d dev ./src/index.html",
     "build:prod": "tsc",
     "build:watch": "tsc --watch"
-  }
+  },
+  "main": "prod/index.js",
+  "name": "makra-ui",
+  "version": "0.0.1"
 }
