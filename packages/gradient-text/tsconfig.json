@@ -11,10 +11,5 @@
   ],
   "exclude": [
     "test/*.ts"
-  ],
-  "references": [
-    {
-      "path": "../base"
-    }
   ]
 }

@@ -49,12 +49,10 @@
     ]
   },
   "include": [
-    "custom_typings/**/*.ts",
     "*.ts"
   ],
   "exclude": [],
   "references": [
-    {"path": "packages/base"},
     {"path": "packages/gradient-text"},
     {"path": "packages/loading-button"},
   ]

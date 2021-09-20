@@ -1,5 +1,6 @@
-import {LitElement, css, html, unsafeCSS} from 'lit';
+import {LitElement, html} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import {styles} from './styles.css';
 
 @customElement('loading-button')
 export class LoadingButton extends LitElement {
@@ -8,67 +9,7 @@ export class LoadingButton extends LitElement {
     @property({type: Boolean})
     isPrimary: boolean = true
 
-    static get styles() {
-        const primaryColor = '#009688'
-        const buttonHeight = 48
-        return css`
-            button {
-                width: 120px;
-                height: ${buttonHeight}px;
-                border-radius: 5px;
-                border: 2px solid ${unsafeCSS(primaryColor)};
-                background-color: ${unsafeCSS(primaryColor)};
-                color: white;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-            }
-            span,
-            svg {
-            position: absolute;
-            fill: transparent;
-            }
-
-            .submitting {
-            width: ${buttonHeight}px;
-            background-color: white;
-            border: 2px solid transparent;
-            border-radius: 100vh;
-            border-left: 2px solid ${unsafeCSS(primaryColor)};
-            border-bottom: 2px solid ${unsafeCSS(primaryColor)};
-            animation: spin 1.2s 0.3s both;
-            transition: 0.3s;
-            }
-
-            .submitting span {
-            color: transparent;
-            }
-
-            .submitting svg {
-            animation: check 0.5s 1.2s forwards;
-            }
-
-            @keyframes spin {
-            80% {
-                border: 2px solid transparent;
-                border-left: 2px solid ${unsafeCSS(primaryColor)};
-            }
-            100% {
-                border: 2px solid ${unsafeCSS(primaryColor)};
-                transform: rotate(1080deg);
-            }
-            }
-
-            @keyframes check {
-            to {
-                fill: ${unsafeCSS(primaryColor)};
-            }
-            }
-
-        `
-    }
+    static override styles = [styles];
 
     render() {
         return html`
@@ -92,3 +33,9 @@ export class LoadingButton extends LitElement {
         }, 3000);
     }
 }
+
+declare global {
+    interface HTMLElementTagNameMap {
+      'loading-button': LoadingButton;
+    }
+  }
