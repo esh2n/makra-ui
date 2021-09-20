@@ -1,24 +1,28 @@
 {
+  "name": "@okra-ui/root",
+  "private": true,
   "dependencies": {
     "lit": "^2.0.0-rc.4"
   },
   "devDependencies": {
-    "typescript": "^4.1.2",
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.26.5",
+    "@types/command-line-args": "^5.2.0",
+    "command-line-args": "^5.2.0",
     "eslint": "^6.8.0",
+    "lerna": "^4.0.0",
+    "node-sass-import": "^2.0.1",
+    "parcel-bundler": "^1.12.3",
     "prettier": "^2.0.4",
+    "sass": "^1.26.5",
+    "typescript": "^4.1.2",
     "vite": "^2.5.7"
   },
   "scripts": {
     "start": "parcel server ./src/index.html",
     "build:dev": "NODE_ENV=development vite build",
-    "build:prd": "NODE_ENV=production vite build"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "dist/build.js",
-  "name": "makra-ui",
-  "version": "1.0.0"
+    "build:prd": "NODE_ENV=production vite build",
+    "build": "npm run build:styling && npm run build:typescript -- --verbose",
+    "build:typescript": "tsc --build",
+    "build:styling": "lerna run --stream build:style",
+    "pub": "lerna run --stream publish"
+  }
 }

@@ -1,32 +1,59 @@
 {
   "compilerOptions": {
-    "target": "es2019",
-    "module": "es2020",
-    "lib": ["es2020", "DOM", "DOM.Iterable"],
+    "target": "es2017",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom", "dom.iterable"],
     "declaration": true,
-    "declarationMap": true,
     "sourceMap": true,
     "inlineSources": true,
-    "outDir": "./prod",
-    "rootDir": "./src",
-    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "outDir": "./",
+    "baseUrl": "./packages",
+    "composite": true,
+    "importHelpers": true,
     "plugins": [
       {
         "name": "ts-lit-plugin",
-        "strict": true
+        "rules": {
+          "no-unknown-tag-name": "error",
+          "no-unclosed-tag": "error",
+          "no-unknown-property": "error",
+          "no-unintended-mixed-binding": "error",
+          "no-invalid-boolean-binding": "error",
+          "no-expressionless-property-binding": "error",
+          "no-noncallable-event-binding": "error",
+          "no-boolean-in-attribute-binding": "error",
+          "no-complex-attribute-binding": "error",
+          "no-nullable-attribute-binding": "error",
+          "no-incompatible-type-binding": "error",
+          "no-invalid-directive-binding": "error",
+          "no-incompatible-property-type": "error",
+          "no-unknown-property-converter": "error",
+          "no-invalid-attribute-name": "error",
+          "no-invalid-tag-name": "error",
+          "no-property-visibility-mismatch": "error",
+          "no-unknown-attribute": "off",
+          "no-unknown-event": "off",
+          "no-unknown-slot": "off",
+          "no-invalid-css": "off"
+        }
       }
     ]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": []
+  "include": [
+    "*.ts"
+  ],
+  "exclude": [],
+  "references": [
+    {"path": "packages/gradient-text"},
+    {"path": "packages/loading-button"},
+  ]
 }
