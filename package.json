@@ -1,4 +1,6 @@
 {
+  "name": "@makra-ui/root",
+  "private": true,
   "dependencies": {
     "lit": "^2.0.0-rc.4"
   },
@@ -13,12 +15,14 @@
   "scripts": {
     "start": "parcel server ./src/index.html",
     "build:dev": "NODE_ENV=development vite build",
-    "build:prd": "NODE_ENV=production vite build"
+    "build:prd": "NODE_ENV=production vite build",
+
+    "build": "npm run build:styling && npm run build:typescript -- --verbose",
+    "build:typescript": "tsc --build",
+    "build:styling": "lerna run --stream build:style"
+
   },
   "files": [
     "dist"
-  ],
-  "main": "dist/build.js",
-  "name": "makra-ui",
-  "version": "1.0.0"
+  ]
 }
