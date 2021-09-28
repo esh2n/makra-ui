@@ -9,7 +9,7 @@ export class LoadingButton extends LitElement {
     @property({type: Boolean})
     isPrimary: boolean = true
 
-    static override styles = [styles];
+    static styles = [styles];
 
     render() {
         return html`

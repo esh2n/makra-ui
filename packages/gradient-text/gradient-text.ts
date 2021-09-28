@@ -5,7 +5,7 @@ import {styles} from './styles.css';
 @customElement('gradient-text')
 export class GradientText extends LitElement {
 
-    static override styles = [styles];
+    static styles = [styles];
     @property({type: String})
     text?: string
 

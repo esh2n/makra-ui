@@ -2,7 +2,6 @@
   "name": "@okra-ui/root",
   "private": true,
   "dependencies": {
-    "lit": "^2.0.0-rc.4"
   },
   "devDependencies": {
     "@types/command-line-args": "^5.2.0",
@@ -17,7 +16,7 @@
     "vite": "^2.5.7"
   },
   "scripts": {
-    "start": "parcel server ./src/index.html",
+    "start": "parcel server ./demo/index.html",
     "build:dev": "NODE_ENV=development vite build",
     "build:prd": "NODE_ENV=production vite build",
     "build": "npm run build:styling && npm run build:typescript -- --verbose",

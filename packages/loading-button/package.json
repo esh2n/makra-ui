@@ -1,10 +1,11 @@
 {
     "name": "@okra-ui/loading-button",
-    "version": "0.0.4",
+    "version": "0.0.10",
     "main": "loading-button.js",
     "module": "loading-button.js",
     "dependencies": {
-      "lit": "^2.0.0-rc.4"
+      "lit": "^2.0.0-rc.4",
+      "tslib": "^2.0.1"
     },
     "scripts": {
         "build:style": "node ../../scripts/sass-to-lit-css/index.js styles.scss",
