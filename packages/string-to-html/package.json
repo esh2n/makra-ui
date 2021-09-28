@@ -1,0 +1,19 @@
+{
+  "name": "@okra-ui/string-to-html",
+  "version": "0.0.48",
+  "main": "string-to-html.js",
+  "module": "string-to-html.js",
+  "dependencies": {
+    "highlight.js": "^11.2.0",
+    "lit": "^2.0.0-rc.4",
+    "tslib": "^2.0.1"
+  },
+  "scripts": {
+    "build:style": "node ../../scripts/sass-to-lit-css/index.js styles.scss",
+    "publish": "npm publish --access=public"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

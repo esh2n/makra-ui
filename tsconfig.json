@@ -55,5 +55,6 @@
   "references": [
     {"path": "packages/gradient-text"},
     {"path": "packages/loading-button"},
+    {"path": "packages/string-to-html"},
   ]
 }
